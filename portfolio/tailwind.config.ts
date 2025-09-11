@@ -8,11 +8,7 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: { sans: ['Orbitron', 'ui-sans-serif', 'system-ui'] },
-    fontSize: {
-      fluid: ['clamp(1rem, 0.6rem + 1.2vw, 1.125rem)', '1.6'],
-      '2fluid': ['clamp(1.5rem, 1rem + 2.8vw, 3rem)', '1.2']
-    },
+      fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

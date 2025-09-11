@@ -2,35 +2,27 @@
 
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Orbitron, Poppins, Playfair_Display, Bebas_Neue, Oswald, Lora, Roboto_Mono, Fira_Code, Bodoni_Moda_SC } from 'next/font/google'
+import { Big_Shoulders_Inline_Text,Bebas_Neue, Oswald, Lora, Stick_No_Bills, Doto, } from 'next/font/google'
 
 // Load 10 fonts (pick any you like)
-const orbitron = Orbitron({ subsets: ['latin'], weight: ['400','700'] })
-const poppins = Poppins({ subsets: ['latin'], weight: ['400','600'] })
-const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400','700'] })
-const bebas = Bebas_Neue({ subsets: ['latin'], weight: ['400'] })
-const oswald = Oswald({ subsets: ['latin'], weight: ['400','600'] })
-const lora = Lora({ subsets: ['latin'], weight: ['400','700'] })
-const robotoMono = Roboto_Mono({ subsets: ['latin'], weight: ['400','700'] })
-const firaCode = Fira_Code({ subsets: ['latin'], weight: ['400','700'] })
-const bodoni = Bodoni_Moda_SC({ subsets: ['latin'], weight: ['400','700'] })
+ const shoulders = Big_Shoulders_Inline_Text({ subsets: ['latin'], weight: ['400','400'] })
+ const bebas = Bebas_Neue({ subsets: ['latin'], weight: ['400', '400'] })
+ const oswald = Oswald({ subsets: ['latin'], weight: ['400','200'] })
+ const stickno = Stick_No_Bills({ subsets: ['latin'], weight: ['400','200'] })
+const doto = Doto({ subsets: ['latin'], weight: ['100','100'] })
 
 const FONTS = [
-  orbitron.className,
-  poppins.className,
-  playfair.className,
-  bebas.className,
-  oswald.className,
-  lora.className,
-  robotoMono.className,
-  firaCode.className,
-  bodoni.className,
+   shoulders.className,
+   bebas.className,
+   oswald.className,
+   stickno.className,
+  doto.className,
 ]
 
 export default function AnimatedName({
-  text = 'Frontend Developer',
-  intervalMs = 1000,     // how long each font is shown
-  fadeMs = 100,          // cross-fade duration
+  text = 'Front-End Developer',
+  intervalMs = 4000,     // how long each font is shown
+  fadeMs = 400,          // cross-fade duration
 }: {
   text?: string
   intervalMs?: number
@@ -45,7 +37,7 @@ export default function AnimatedName({
   }, [intervalMs])
 
   return (
-    <div className="relative mx-auto min-w-[18ch] text-center">
+    <div className=" relative mx-auto min-w-[18ch] text-center">
       {/* Back layer (current) */}
       <span className={`${FONTS[index]} block text-5xl md:text-7xl tracking-tight`}>
         {text}
@@ -59,7 +51,7 @@ export default function AnimatedName({
           initial={{ opacity: 0 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: fadeMs / 1000, ease: 'easeInOut' }}
+          transition={{ duration: fadeMs / 100, ease: 'easeIn' }}
           aria-hidden
         >
           {text}
