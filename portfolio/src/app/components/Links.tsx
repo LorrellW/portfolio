@@ -11,7 +11,7 @@ const exo = Exo_2({
 
 export default function Links() {
   return (
-    <section className="flex flex-col mt-0 items-center gap-6">
+    <div className="flex flex-col items-center gap-6">
       <div className={`${exo.className} title`}>
         <Link href="#about">« About Me »</Link>
       </div>
@@ -23,6 +23,6 @@ export default function Links() {
       <div className={`${exo.className} title`}>
         <Link href="#contact">« Contact »</Link>
       </div>
-    </section>
+    </div>
   );
 }

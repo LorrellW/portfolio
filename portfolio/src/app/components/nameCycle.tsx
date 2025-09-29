@@ -37,7 +37,7 @@ export default function AnimatedName({
   }, [intervalMs])
 
   return (
-    <div className=" relative mx-auto min-w-[18ch] text-center">
+    <div className=" relative mx-auto min-w-[18ch] text-center text-white">
       {/* Back layer (current) */}
       <span className={`${FONTS[index]} block text-5xl md:text-7xl tracking-tight`}>
         {text}
