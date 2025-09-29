@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Links from "./components/Links"
 import HeroVanta from "./components/HeroVanta";
+import ThemeToggle from "./components/ThemeToggle";
 
   const cairo = Cairo_Play({
   subsets: ["latin"],
@@ -15,32 +16,26 @@ import HeroVanta from "./components/HeroVanta";
   //display: "swap",
 });
 
-
-
 export default function Home() {
 
-  
-
   return (
+    <>
     <main>
       
       <header>
-        <HeroVanta/>
-
+        
       </header>
-      {/* <div className="flex-row text-center w-16 h-16 bg-yellow-600 mb-14">
-      <h1 className={`${cairo.className} text-3xl p-4 text-nowrap `}>Lorrell Winfield.</h1>
-      <div className="absolute bg-yellow-300 w-32 h-20"/>
-     </div>
-     
-      
-       */}
-       < AnimatedName/>
-       <div className="grid grid-cols-3">
+      <h1 className={`${cairo.className} text-3xl p-4 text-nowrap `}>Lorrell Winfield.</h1> 
+        <h2 className={`${cairo.className} p-4 ml-16  `}>Software Developer.</h2>         
+       {/* < AnimatedName/> */}
+       <div className="grid grid-cols-3 p-8">
         <div></div>
-        <div></div>
-        <Links/>
+        <div className="pt-10"><Links/></div>
          </div>
     </main>
+    <footer className="flex place-content-end p-8">
+      <ThemeToggle/>
+    </footer>
+    </>
   );
 }

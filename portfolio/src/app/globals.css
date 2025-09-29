@@ -6,13 +6,12 @@
    Theme tokens (RGB triplets)
 ---------------------------- */
 :root {
-  --background: 255 255 255;   /* was #ffffff */
-  --foreground: 23 23 23;      /* was #171717 */
+  --background: 255 255 255;  /* light bg */
+  --foreground: 23 23 23;     /* dark text */
 }
-
 .dark {
-  --background: 10 10 10;      /* was #0a0a0a */
-  --foreground: 237 237 237;   /* was #ededed */
+  --background: 10 10 10;     /* dark bg */
+  --foreground: 237 237 237;  /* light text */
 }
 
 /* ---------------------------
@@ -29,7 +28,7 @@ body {
 /* Avoid global h1 font-family; use a class instead so it doesn't fight next/font */
 .h1-banner {
   /* if you really want this style, keep it scoped to a class */
-  color: white;
+  color: red;
   font-size: 32px;
   font-weight: 400;
   text-align: center;

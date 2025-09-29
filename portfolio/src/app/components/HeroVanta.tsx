@@ -2,8 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
-import AnimatedName from "./nameCycle";
-import Links from "./Links";
 import { Cairo_Play } from "next/font/google";
 
   const cairo = Cairo_Play({
