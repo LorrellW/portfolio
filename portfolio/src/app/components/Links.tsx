@@ -11,7 +11,7 @@ const exo = Exo_2({
 
 export default function Links() {
   return (
-    <div className="flex flex-col items-center gap-6">
+    <div className="flex flex-col p-10 items-center gap-6">
       <div className={`${exo.className} title`}>
         <Link href="#about">« About Me »</Link>
       </div>
