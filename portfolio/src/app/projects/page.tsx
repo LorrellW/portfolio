@@ -106,7 +106,7 @@ function ProjectCard({ p }: { p: Project }) {
                 {p.metrics?.perf && <Metric label="Perf" value={p.metrics.perf} />}
                 {p.metrics?.a11y && <Metric label="A11y" value={p.metrics.a11y} />}
             </div>
-
+{/* 
             <div className="mt-4 flex gap-2">
                 {p.live && (
                     <a
@@ -127,10 +127,10 @@ function ProjectCard({ p }: { p: Project }) {
                     >
                         Code
                     </a>
-                )}
+                )} */}
                 {/* Optional: link to a case-study page */}
                 {/* <Link href="/projects/fortune400" className="text-xs underline underline-offset-4">Case Study</Link> */}
-            </div>
+            {/* </div> */}
         </article>
     );
 }
@@ -177,7 +177,7 @@ export default function ProjectsPage() {
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         placeholder="Search projects…"
-                        className="w-64 rounded-lg border border-foreground/20 bg-background/60 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-foreground/30"
+                        className="w-64 rounded-lg border border-foreground/20 bg-background/60 px-2 py-2 text-sm outline-none focus:ring-2 focus:ring-foreground/30"
                     />
                 </div>
             </header>
