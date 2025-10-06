@@ -38,13 +38,13 @@ body {
   text-transform: uppercase;
 }
 
-section {
+/* section {
   display: flex;
   justify-content: center;
   align-items: center;
   background: black;
   height: 100vh;
-}
+} */
 
 /* Variable font demo (no nesting) */
 .title {
