@@ -39,7 +39,7 @@ export default function ContactPage() {
       {/* Header */}
       <header className="mb-10">
         <h1 className="text-4xl font-semibold tracking-tight">Contact Me</h1>
-        <p className="mt-2 text-foreground/70">Drop a line, let's connect! </p>
+        <p className="mt-2 text-foreground/70">Drop a line, lets connect! </p>
       </header>
 
       {/* 2-col layout */}
