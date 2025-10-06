@@ -1,50 +1,36 @@
-# Lorrell Winfield — Software Developer Portfolio
+# Lorrell Winfield — Developer Portfolio 🚀
 
-A modern, responsive developer portfolio built with Next.js 15, TypeScript, and Tailwind CSS.
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-This site showcases my front-end and full-stack projects, professional experience, and design approach—built to highlight code quality, accessibility, and performance.
-
-**[View Live Demo](https://your-portfolio-url.com)**
+A modern, responsive portfolio built to showcase my front-end and full-stack projects, professional experience, and design approach. This site was built with a focus on code quality, accessibility, and performance.
 
 ---
 
-## ✨ Features
+### Key Features
 
--   **Dynamic Projects Page**: Filter and search through featured builds. Each project card includes the tech stack, a live demo link, and a link to the GitHub repository.
--   **Dark/Light Mode Toggle**: Theme state is persisted using `next-themes`, with colors powered by CSS variables and Tailwind tokens.
--   **Fully Responsive Design**: A mobile-first layout built with semantic HTML and accessible navigation. Images are optimized with `next/image` for fast load times.
--   **Detailed About & Contact Pages**: The "About Me" page introduces my background and skills, while the "Contact" page provides quick actions (copy email, download resume) and links to social profiles.
--   **Component-Driven Architecture**: Built with reusable components like `ProjectCard`, `Tag`, and `ThemeToggle`, with project data managed in a modular array.
+-   🔎 **Dynamic Project Filtering**: Easily search and filter projects by technology or title.
+-   🌓 **Dark & Light Mode**: Seamless theme toggling with persistent state via `next-themes`.
+-   📱 **Responsive & Accessible**: Mobile-first design using semantic HTML and optimized images.
+-   📄 **Clear Navigation**: Dedicated pages for my background, skills, and contact information.
+-   🧩 **Component-Driven UI**: Reusable components for project cards, tags, and theme toggles.
 
-## 🛠️ Tech Stack
+### Technology Breakdown
 
--   **Framework**: Next.js 15 (App Router)
--   **Language**: TypeScript
--   **Styling**: Tailwind CSS & CSS Variables
--   **UI & Animation**: Framer Motion & React Icons
--   **State Management**: `next-themes`
--   **Fonts**: Geist & Cairo Play (via `next/font`)
--   **Hosting**: Vercel
+| Layer          | Technologies                                            |
+| :------------- | :------------------------------------------------------ |
+| **Framework** | `Next.js 15` (App Router)                               |
+| **Language** | `TypeScript`                                            |
+| **Styling** | `Tailwind CSS`, `CSS Variables` (for Theming)           |
+| **UI/Animation** | `Framer Motion`, `React Icons`                          |
+| **State/Theme**| `next-themes`                                           |
+| **Hosting** | `Vercel`                                                |
+| **Fonts** | `Geist`, `Cairo_Play` (via `next/font`)                 |
 
-## 🚀 Getting Started
+### Running Locally
 
-To run this project locally:
-
-1.  **Clone the repository:**
-    ```sh
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    ```
-2.  **Navigate to the directory:**
-    ```sh
-    cd your-repo-name
-    ```
-3.  **Install dependencies:**
-    ```sh
-    npm install
-    ```
-4.  **Run the development server:**
-    ```sh
-    npm run dev
-    ```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+1.  Clone the repo: `git clone https://github.com/your-username/your-repo-name.git`
+2.  Install packages: `npm install`
+3.  Start the server: `npm run dev`
