@@ -8,6 +8,7 @@ import Links from "./components/Links";
 import ThemeToggle from "./components/ThemeToggle";
 import Loading from "./components/Loading";
 import SocialLinks from "./components/SocialLinks";
+import Image from "next/image";
 
 const cairo = Cairo_Play({
   subsets: ["latin"],
@@ -37,6 +38,14 @@ export default function Home() {
 
         {/* 1. Add bottom padding to prevent content from being hidden by the fixed footer */}
         <main className="flex flex-col items-center justify-center min-h-screen p-4 pb-22 text-center">
+          <button > <Link
+                href={"/"}> <Image
+                    src={"/logo5.png"}
+                    width={100}
+                    height={100}
+                    className="absolute top-0 left-0 p-2 h-20 w-20 object-contain"
+                    alt="Logo"
+                ></Image> </Link> </button>
           <div className="max-w-2xl">
             <h1 className={`${cairo.className} text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400`}>
               Lorrell Winfield.
@@ -51,7 +60,7 @@ export default function Home() {
               <Link href="/projects" className="w-full sm:w-auto px-6 py-3 font-semibold text-white bg-gray-800 rounded-md hover:bg-gray-700 transition-colors dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300">
                   View My Work
               </Link>
-              <Link href="/contact" className="w-full sm:w-auto px-6 py-3 font-semibold text-foreground border border-foreground/50 rounded-md hover:bg-foreground/5 transition-colors">
+              <Link href="/contactMe" className="w-full sm:w-auto px-6 py-3 font-semibold text-foreground border border-foreground/50 rounded-md hover:bg-foreground/5 transition-colors">
                   Get In Touch
               </Link>
             </div>

@@ -6,6 +6,7 @@ import { SiGithub } from "react-icons/si";
 import { FiMail,  FiFileText, FiCopy, FiCheck, FiMapPin, FiClock } from "react-icons/fi";
 import { BsLinkedin } from "react-icons/bs";
 import { MdOutlineHomeWork } from "react-icons/md";
+import Image from "next/image";
 
 
 const EMAIL = "LorrellWinfieldii@gmail.com";           // ← put your real email
@@ -26,6 +27,15 @@ export default function ContactPage() {
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-12 text-foreground">
+      <button > <Link
+                href={"/"}> <Image
+                    src={"/logo5.png"}
+                    width={100}
+                    height={100}
+                    className="absolute top-0 left-0 p-2 h-20 w-20 object-contain"
+                    alt="Logo"
+                ></Image> </Link> </button>
+                
       {/* Header */}
       <header className="mb-10">
         <h1 className="text-4xl font-semibold tracking-tight">Contact Me</h1>

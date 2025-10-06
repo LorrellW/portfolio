@@ -41,22 +41,22 @@ export default function AboutMe() {
 
           <div className="mt-5 flex flex-wrap gap-2">
             <Link
-              href="https://github.com/your-username"
+              href="https://Github.com/LorrellW"
               className="rounded-lg border border-foreground/20 px-3 py-1 text-sm hover:bg-foreground/10 transition"
             >
               GitHub
             </Link>
             <Link
-              href="https://www.linkedin.com/in/your-handle"
+              href="https://Linkedin.com/in/lorrell-winfield-lw000/"
               className="rounded-lg border border-foreground/20 px-3 py-1 text-sm hover:bg-foreground/10 transition"
             >
               LinkedIn
             </Link>
             <Link
-              href="/resume.pdf"
+              href="/L.Winfield Resume 25.pdf"
               className="rounded-lg bg-foreground px-3 py-1 text-sm text-background hover:opacity-90 transition"
             >
-              Résumé
+              Resume
             </Link>
           </div>
         </aside>
