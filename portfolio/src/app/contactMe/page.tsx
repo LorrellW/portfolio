@@ -24,7 +24,7 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-12 text-foreground">
+    <main className="mx-auto max-w-5xl px-6 py-12 text-foreground xs:mt-10 sm:mt-10 lg:mt-4 mt-6">
       {/* <button > <Link
                 href={"/"}> <Image
                     src={"/logo5.png"}
