@@ -156,7 +156,7 @@ export default function ProjectsPage() {
         <main className="mx-auto max-w-6xl px-6 py-12 text-foreground">
             <header className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                 <div>
-                    <h1 className="text-4xl font-semibold tracking-tight">Projects</h1>
+                    <h1 className="text-4xl font-semibold tracking-tight xs:mt-10">Projects</h1>
                     <p className="mt-1 text-foreground/70">
                         A curated set of front-end and full-stack builds with live demos and code.
                     </p>

@@ -28,7 +28,7 @@ export default function AboutMe() {
       <div className="grid grid-cols-1 gap-10 md:grid-cols-[260px_1fr]">
         {/* Sidebar */}
         <aside>
-          <div className="relative h-36 w-36 overflow-hidden rounded-full ring-1 ring-neutral-400 ring-foreground/15">
+          <div className="relative h-36 w-36 overflow-hidden rounded-full ring-1 ring-neutral-400 ring-foreground/15 mt-8 xs:mt-14 sm:mt-10 md:mt-0 xl:mt-0">
             <Image
               src="/head-shot.jpg"
               alt="Lorrell Winfield logo"
