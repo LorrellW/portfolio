@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { SiGithub } from "react-icons/si";
 import { FiMail,  FiFileText, FiCopy, FiCheck, FiMapPin, FiClock } from "react-icons/fi";
 import { BsLinkedin } from "react-icons/bs";
 import { MdOutlineHomeWork } from "react-icons/md";
-import Image from "next/image";
 
 
 const EMAIL = "LorrellWinfieldii@gmail.com";           // ← put your real email
