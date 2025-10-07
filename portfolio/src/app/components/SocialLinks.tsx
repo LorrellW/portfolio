@@ -24,7 +24,7 @@ const socialLinks = [
 
 export default function SocialLinks() {
   return (
-    <div className="flex items-center gap-6">
+    <div className="flex gap-6">
       {socialLinks.map((link) => (
         <a
           href={link.url}

@@ -28,18 +28,18 @@ export default function AboutMe() {
       <div className="grid grid-cols-1 gap-10 md:grid-cols-[260px_1fr]">
         {/* Sidebar */}
         <aside>
-          <div className="relative h-36 w-36 overflow-hidden rounded-full ring-1 ring-foreground/15">
+          <div className="relative h-36 w-36 overflow-hidden rounded-full ring-1 ring-neutral-400 ring-foreground/15">
             <Image
-              src="/logo5.png"
-              alt="Lorrell Winfield headshot"
+              src="/head-shot.jpg"
+              alt="Lorrell Winfield logo"
               width={400}
               height={400}
-              className="object-cover"
+              className="h-full w-full object-cover"
               priority
             />
           </div>
 
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-5 grid-rows-2  gap-4">
             <Link
               href="https://Github.com/LorrellW"
               className="rounded-lg border border-foreground/20 px-3 py-1 text-sm hover:bg-foreground/10 transition"
@@ -52,13 +52,17 @@ export default function AboutMe() {
             >
               LinkedIn
             </Link>
+            
+            <div className="mt-3">
             <Link
               href="/L.Winfield Resume 25.pdf"
-              className="rounded-lg bg-foreground px-3 py-1 text-sm text-background hover:opacity-90 transition"
+             className="rounded-lg border border-foreground/20 px-2.5 py-1 text-sm hover:bg-foreground/10 transition"
             >
               Resume
             </Link>
+            </div>
           </div>
+          
         </aside>
 
         {/* Main content */}

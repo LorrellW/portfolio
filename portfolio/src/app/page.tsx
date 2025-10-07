@@ -30,7 +30,7 @@ export default function Home() {
     <>
       <Loading isLoading={isLoading} />
 
-      <div className={`transition-opacity duration-1000 ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`transition-opacity duration-2000 ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <header className="absolute top-0 right-0 p-4 md:p-8">
           <ThemeToggle />
         </header>

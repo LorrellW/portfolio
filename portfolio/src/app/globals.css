@@ -72,3 +72,38 @@ body {
   display: inline-block;
   line-height: 20px;
 }
+
+/* Container to hold the logo pieces together */
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertically align the letters and line */
+    gap: 15px; /* Space between the elements */
+}
+
+/* Styling for the letters 'L' and 'W' */
+.letter {
+    font-size: 100px; /* Adjust size as needed */
+    font-weight: 250; /* Lighter font weight to match logo1.png */
+    color: white;
+    font-family: sans-serif;
+}
+
+/* Styling for our progress line */
+.progress-line {
+    width: 4px; /* A bit thinner to match logo1.png */
+    height: 160px; /* A bit taller */
+    background-color: rgb(178, 209, 255);
+    animation: fill-up 2.5s ease-out forwards;
+}
+
+/* This is the animation definition. It tells the line how to grow. */
+@keyframes fill-up {
+    from {
+        transform: scaleY(0); /* The line has zero height */
+        transform-origin: bottom; /* It will grow from the bottom up */
+    }
+    to {
+        transform: scaleY(1); /* The line is at full height */
+        transform-origin: bottom;
+    }
+}

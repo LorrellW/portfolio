@@ -27,19 +27,19 @@ export default function ContactPage() {
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-12 text-foreground">
-      <button > <Link
+      {/* <button > <Link
                 href={"/"}> <Image
                     src={"/logo5.png"}
                     width={100}
                     height={100}
                     className="absolute top-0 left-0 p-2 h-20 w-20 object-contain"
                     alt="Logo"
-                ></Image> </Link> </button>
+                ></Image> </Link> </button> */}
                 
       {/* Header */}
       <header className="mb-10">
         <h1 className="text-4xl font-semibold tracking-tight">Contact Me</h1>
-        <p className="mt-2 text-foreground/70">Drop a line, lets connect! </p>
+        <p className="mt-4 text-foreground/70">Drop a line, lets connect! </p>
       </header>
 
       {/* 2-col layout */}
