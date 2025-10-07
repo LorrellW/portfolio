@@ -155,15 +155,6 @@ export default function ProjectsPage() {
 
     return (
         <main className="mx-auto max-w-6xl px-6 py-12 text-foreground">
-            <button > <Link
-                href={"/"}> <Image
-                    src={"/logo5.png"}
-                    width={100}
-                    height={100}
-                    className="absolute top-0 left-0 p-2 h-20 w-20 object-contain"
-                    alt="Logo"
-                ></Image> </Link> </button>
-
             <header className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                     <h1 className="text-4xl font-semibold tracking-tight">Projects</h1>
