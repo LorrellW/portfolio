@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Header from "../components/header";
 
 // --------- Types & sample data ----------
 type Project = {

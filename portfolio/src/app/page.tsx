@@ -7,8 +7,7 @@ import Link from "next/link";
 import Links from "./components/Links";
 import ThemeToggle from "./components/ThemeToggle";
 import Loading from "./components/Loading";
-import SocialLinks from "./components/SocialLinks";
-import Image from "next/image";
+
 
 const cairo = Cairo_Play({
   subsets: ["latin"],
