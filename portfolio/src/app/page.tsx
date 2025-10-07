@@ -21,7 +21,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 1700);
 
     return () => clearTimeout(timer);
   }, []);
@@ -37,7 +37,7 @@ export default function Home() {
 
         {/* 1. Add bottom padding to prevent content from being hidden by the fixed footer */}
         <main className="flex flex-col items-center justify-center min-h-screen p-4 pb-22 text-center">
-          <div className="max-w-2xl">
+          <div className="md:max-w-2xl pt-20">
             <h1 className={`${cairo.className} text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400`}>
               Lorrell Winfield.
             </h1>

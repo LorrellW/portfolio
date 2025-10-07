@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function HomeLinkLogo() {
     return (
-        <div className="absolute top-0 left-0 m-4">
+        <div className="absolute top-0 left-0 xs:m-4">
             <button>
                 <Link href={"/"}>
                     <Image
