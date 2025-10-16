@@ -2,7 +2,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowRight, FiGithub } from "react-icons/fi";
+import { BsLinkedin } from "react-icons/bs";
 
 export const metadata: Metadata = {
   title: "About | Lorrell Winfield",
@@ -17,127 +18,184 @@ const SkillBadge = ({ skill }: { skill: string }) => (
 
 export default function AboutMe() {
   const skills = {
-    frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5"],
-    backend: ["Node.js", "Express", "Python"],
-    tools: ["Git", "GitHub", "Vercel", "Docker", "VS Code"],
+    languages: ["JavaScript (ES6+)", "Python", "HTML5", "CSS3", "TypeScript"],
+    frameworks: ["React", "Next.js", "Node.js", "Tailwind CSS", "Firebase", "PostGreSQL"],
+    development: ["UI/UX Design", "State Management", "REST API", "Figma", "Git"],
   };
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-12 text-foreground">
-      {/* 2-col layout on md+, stack on mobile */}
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-[260px_1fr]">
-        {/* Sidebar */}
-        <aside>
-          <div className="relative h-36 w-36 overflow-hidden rounded-full ring-1 ring-neutral-400 ring-foreground/15 mt-8 xs:mt-14 sm:mt-10 md:mt-0 xl:mt-0">
+    <main className="mx-auto max-w-5xl px-6 py-12 text-foreground xs:mt-10 sm:mt-10 lg:mt-4 mt-6">
+      {/* Header */}
+      <header className="mb-10">
+        <div className="flex items-center gap-6 mb-6">
+          <div className="relative h-24 w-24 overflow-hidden rounded-full ring-2 ring-foreground/15">
             <Image
               src="/head-shot.jpg"
-              alt="Lorrell Winfield logo"
+              alt="Lorrell Winfield"
               width={400}
               height={400}
               className="h-full w-full object-cover"
               priority
             />
           </div>
-
-          <div className="mt-5 grid-rows-2  gap-4">
-            <Link
-              href="https://Github.com/LorrellW"
-              className="rounded-lg border border-foreground/20 px-3 py-1 text-sm hover:bg-foreground/10 transition"
-            >
-              GitHub
-            </Link>
-            <Link
-              href="https://Linkedin.com/in/lorrell-winfield-lw000/"
-              className="rounded-lg border border-foreground/20 px-3 py-1 text-sm hover:bg-foreground/10 transition"
-            >
-              LinkedIn
-            </Link>
-            
-            <div className="mt-3">
-            <Link
-              href="/L.Winfield Resume 25.pdf"
-             className="rounded-lg border border-foreground/20 px-2.5 py-1 text-sm hover:bg-foreground/10 transition"
-            >
-              Resume
-            </Link>
-            </div>
-          </div>
-          
-        </aside>
-
-        {/* Main content */}
-        <section className="space-y-8">
-          {/* Hero */}
-          <header>
-            <h1 className="text-4xl font-semibold tracking-tight">Lorrell Winfield</h1>
-            <p className="mt-1 text-lg text-foreground/80">
-              Software Developer — React • Next.js • TypeScript
-            </p>
-            <p className="mt-4 leading-relaxed">
-              I’m a Computer Science student at UMKC and former Air Force Special Operator
-              (7 years). I build fast, accessible, maintainable web apps with a calm,
-              mission-driven approach: clear scope, clean code, reliable delivery.
-            </p>
-          </header>
-
-          {/* Highlights */}
           <div>
-            <h2 className="text-xl font-semibold">Highlights & Impact</h2>
-            <ul className="mt-3 space-y-2 text-sm text-foreground/90 list-disc pl-5">
-              <li>Refactored chat UI for a React Native app → render cost ~−35%, TTI −400ms.</li>
-              <li>Built Next.js banking dashboards (Postgres, typed APIs); Lighthouse 95+.</li>
-              <li>Security coursework: threat intel dashboard, risk scoring, PDF/CSV reports.</li>
+            <h1 className="text-4xl font-semibold tracking-tight">Lorrell Winfield</h1>
+            <p className="mt-1 text-lg text-foreground/70">
+              Software Developer - JavaScript • React • Next.js • UI/UX
+            </p>
+          </div>
+        </div>
+        <p className="text-foreground/70 leading-relaxed">
+          Computer Science student out of UMKC. 
+          I build engaging, user-centric web applications with a focus on performance and 
+          design. I have a Mission-driven approach 
+          in software development: clear goals, strong collaboration, and reliable execution.
+        </p>
+      </header>
+
+      {/* 2-col layout */}
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-[1.1fr_.9fr]">
+        {/* Left: main content */}
+        <section className="space-y-6">
+          {/* Key Highlights card */}
+          <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
+            <h2 className="text-lg font-semibold mb-4">Key Highlights</h2>
+            <ul className="space-y-3 text-sm text-foreground/90">
+              <li className="flex items-start gap-3">
+                <span className="text-purple-600 mt-1">▸</span>
+                <span>Developed chat functions and features for Queue dating app</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-purple-600 mt-1">▸</span>
+                <span>Created responsive web experiences with JavaScript, HTML, CSS, and WordPress at Blue Symphony</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-purple-600 mt-1">▸</span>
+                <span>Led technical teams in high-stakes environments during 7 years as Air Force Special Operations</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-purple-600 mt-1">▸</span>
+                <span>Managed $250K+ drone fleet as technician at PG&E, routinely troubleshooting software and hardware issues</span>
+              </li>
             </ul>
           </div>
 
-          {/* Skills */}
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div>
-              <h3 className="text-sm font-medium text-foreground/70">Frontend</h3>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {skills.frontend.map((s) => <SkillBadge key={s} skill={s} />)}
+          {/* Skills cards */}
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
+              <h3 className="text-lg font-semibold mb-3">Languages</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.languages.map((s) => <SkillBadge key={s} skill={s} />)}
               </div>
             </div>
-            <div>
-              <h3 className="text-sm font-medium text-foreground/70">Backend</h3>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {skills.backend.map((s) => <SkillBadge key={s} skill={s} />)}
+
+            <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
+              <h3 className="text-lg font-semibold mb-3">Frameworks & Tools</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.frameworks.map((s) => <SkillBadge key={s} skill={s} />)}
               </div>
             </div>
-            <div className="sm:col-span-2">
-              <h3 className="text-sm font-medium text-foreground/70">Tools</h3>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {skills.tools.map((s) => <SkillBadge key={s} skill={s} />)}
+
+            <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm sm:col-span-2">
+              <h3 className="text-lg font-semibold mb-3">Development Skills</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.development.map((s) => <SkillBadge key={s} skill={s} />)}
               </div>
             </div>
           </div>
 
-          {/* Target */}
-          <div>
-            <h2 className="text-xl font-semibold">What I’m Looking For</h2>
-            <p className="mt-2 text-sm text-foreground/90">
-              Front-end or full-stack roles with React/Next.js, TypeScript, and strong UX.
-              Comfortable owning features end-to-end, collaborating in PRs, and instrumenting
-              for performance & accessibility.
+          {/* What I'm looking for card */}
+          <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
+            <h2 className="text-lg font-semibold mb-3">What I&apos;m Looking For</h2>
+            <p className="text-sm text-foreground/90 leading-relaxed">
+              Front-end or full-stack roles where I can leverage JavaScript 
+              to create exceptional user experiences. I thrive in collaborative environments and 
+              enjoy owning features from concept to deployment.
+            </p>
+          </div>
+        </section>
+
+        {/* Right: education, links and CTA */}
+        <aside className="space-y-6">
+          {/* Education card */}
+          <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
+            <h2 className="text-lg font-semibold mb-3">Education</h2>
+            <div>
+              <h3 className="font-semibold text-foreground">Bachelor of Science</h3>
+              <p className="text-sm text-foreground/70 mt-1">Computer Science</p>
+              <p className="text-sm text-foreground/60 mt-2">University of Missouri-Kansas City</p>
+            </div>
+          </div>
+
+          {/* Background card */}
+          <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
+            <h2 className="text-lg font-semibold mb-3">Background</h2>
+            <p className="text-sm text-foreground/90 leading-relaxed">
+              From Air Force Special Operations to software development, I bring discipline, 
+              adaptability, and a problem-solving mindset to every project. Based in Kansas City, 
+              open to remote, hybrid, or onsite opportunities.
             </p>
           </div>
 
-          {/* CTA */}
-          <div className="flex flex-wrap items-center gap-3">
-            <Link
-              href="/#projects"
-              className="inline-flex items-center gap-2 rounded-xl border border-foreground/20 bg-background/60 px-4 py-2 text-sm hover:bg-foreground/10 transition"
+          {/* Quick links */}
+          <div className="space-y-4">
+            <a
+              href="https://Github.com/LorrellW"
+              target="_blank"
+              rel="noreferrer"
+              className="block rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm transition hover:bg-foreground/5"
             >
-              View Projects <FiArrowRight />
-            </Link>
-            <Link
-              href="mailto:lorrell@example.com"
-              className="inline-flex items-center gap-2 rounded-xl bg-foreground px-4 py-2 text-sm text-background hover:opacity-90 transition"
+              <div className="flex items-center gap-2 text-lg font-semibold">
+                <FiGithub /> GitHub
+              </div>
+              <p className="mt-2 text-sm text-foreground/70">Projects, commits, and pinned repos.</p>
+            </a>
+
+            <a
+              href="https://Linkedin.com/in/lorrell-winfield-lw000/"
+              target="_blank"
+              rel="noreferrer"
+              className="block rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm transition hover:bg-foreground/5"
             >
-              Contact Me
-            </Link>
+              <div className="flex items-center gap-2 text-lg font-semibold">
+                <BsLinkedin /> LinkedIn
+              </div>
+              <p className="mt-2 text-sm text-foreground/70">Experience and endorsements.</p>
+            </a>
+
+            <a
+              href="/L.Winfield Resume 25.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="block rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm transition hover:bg-foreground/5"
+            >
+              <div className="flex items-center gap-2 text-lg font-semibold">
+                <span>📄</span> Resume
+              </div>
+              <p className="mt-2 text-sm text-foreground/70">Full resume with detailed experience.</p>
+            </a>
           </div>
-        </section>
+
+          {/* CTA card */}
+          <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
+            <h2 className="text-lg font-semibold mb-4">Let&apos;s Connect</h2>
+            <div className="space-y-3">
+              <Link
+                href="/projects"
+                className="flex items-center justify-between w-full rounded-xl border border-foreground/20 bg-background/60 px-4 py-2.5 text-sm hover:bg-foreground/10 transition"
+              >
+                <span>View Projects</span>
+                <FiArrowRight />
+              </Link>
+              <Link
+                href="/contactMe"
+                className="flex items-center justify-center w-full rounded-xl bg-foreground px-4 py-2.5 text-sm text-background hover:opacity-90 transition"
+              >
+                Contact Me
+              </Link>
+            </div>
+          </div>
+        </aside>
       </div>
     </main>
   );
