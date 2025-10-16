@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 type LogoSplashProps = { durationMs?: number; onDone?: () => void };
 
-export default function LogoSplash({ durationMs = 1400, onDone }: LogoSplashProps) {
+export default function LogoSplash({ durationMs = 8000, onDone }: LogoSplashProps) {
   const [visible, setVisible] = useState(true);
   if (!visible) return null;
 
@@ -18,7 +18,7 @@ export default function LogoSplash({ durationMs = 1400, onDone }: LogoSplashProp
     >
       <div className="relative w-[220px] h-[220px]">
         <Image
-          src="/logo1.png"                 // <-- corrected filename
+          src="/logo1.png"                 
           alt="LW mark"
           fill
           className="object-contain pointer-events-none select-none"

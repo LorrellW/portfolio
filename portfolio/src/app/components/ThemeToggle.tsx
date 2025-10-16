@@ -13,7 +13,7 @@ export default function ThemeToggle() {
   const isDark = resolvedTheme === "dark";
 
   return (
-    <div className="inline-flex items-center gap-3">
+    <div className="inline-flex items-center  gap-3">
       <button
         type="button"
         role="switch"

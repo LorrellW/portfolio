@@ -10,7 +10,7 @@ export default function Loading({ isLoading }: LoadingProps) {
     <div
       className={`
         fixed inset-0 z-50 flex items-center justify-center bg-black
-        transition-opacity duration-1000 ease-in-out
+        transition-opacity duration-2000 ease-in-out
         ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}
       `}
     >
