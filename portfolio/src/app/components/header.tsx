@@ -1,6 +1,5 @@
 "use client"; // Needs to be a client component for the ThemeToggle and interactivity
 
-import ThemeToggle from "./ThemeToggle";
 import Links from "./Links";
 import Link from "next/link"; // Assuming HomeLinkLogo is just a Link/Logo component
 
@@ -13,14 +12,14 @@ export default function Header() {
       className="sticky text-nowrap
         top-0 left-0 right-0 z-50 
         flex justify-between items-center 
-        py-4 px-6 md:px-12 
-        backdrop-blur-md bg-background/80 
+        py-4 px-6 md:px-0 
+        backdrop-blur-lg bg-background/80 
         border-b  shadow-sm
         transition-all duration-300
       ">
 
       {/* Left Section: Logo/Home Link */}
-      <div className="flex">
+      <div className="flex items-center">
         {/* Using a simple text link placeholder for the logo area */}
         <Link href="/" className="text-2xl font-bold text-foreground hover:text-purple-800 transition-colors tracking-tight">
           LW

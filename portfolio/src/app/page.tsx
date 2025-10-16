@@ -3,17 +3,9 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import { Cairo_Play } from "next/font/google";
 import Link from "next/link";
-import Links from "./components/Links";
 import Loading from "./components/Loading";
 
-
-const cairo = Cairo_Play({
-  subsets: ["latin"],
-  variable: "--font-cario",
-  weight: ["400", "700"],
-});
 
 
 export default function Home() {

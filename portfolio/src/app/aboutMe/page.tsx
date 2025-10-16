@@ -46,9 +46,9 @@ export default function AboutMe() {
           </div>
         </div>
         <p className="text-foreground/70 leading-relaxed">
-          Computer Science student at UMKC and former Air Force Special Operator. 
+          Computer Science student out of UMKC. 
           I build engaging, user-centric web applications with a focus on performance and 
-          design. My background in special operations translates to a mission-driven approach 
+          design. I have a Mission-driven approach 
           in software development: clear goals, strong collaboration, and reliable execution.
         </p>
       </header>
@@ -106,7 +106,7 @@ export default function AboutMe() {
 
           {/* What I'm looking for card */}
           <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
-            <h2 className="text-lg font-semibold mb-3">What I'm Looking For</h2>
+            <h2 className="text-lg font-semibold mb-3">What I&apos;m Looking For</h2>
             <p className="text-sm text-foreground/90 leading-relaxed">
               Front-end or full-stack roles where I can leverage JavaScript 
               to create exceptional user experiences. I thrive in collaborative environments and 
@@ -124,7 +124,6 @@ export default function AboutMe() {
               <h3 className="font-semibold text-foreground">Bachelor of Science</h3>
               <p className="text-sm text-foreground/70 mt-1">Computer Science</p>
               <p className="text-sm text-foreground/60 mt-2">University of Missouri-Kansas City</p>
-              <p className="text-xs text-foreground/50 mt-1">Expected 2025</p>
             </div>
           </div>
 
@@ -179,7 +178,7 @@ export default function AboutMe() {
 
           {/* CTA card */}
           <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
-            <h2 className="text-lg font-semibold mb-4">Let's Connect</h2>
+            <h2 className="text-lg font-semibold mb-4">Let&apos;s Connect</h2>
             <div className="space-y-3">
               <Link
                 href="/projects"
