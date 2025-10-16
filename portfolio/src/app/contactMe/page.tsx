@@ -25,14 +25,6 @@ export default function ContactPage() {
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-12 text-foreground xs:mt-10 sm:mt-10 lg:mt-4 mt-6">
-      {/* <button > <Link
-                href={"/"}> <Image
-                    src={"/logo5.png"}
-                    width={100}
-                    height={100}
-                    className="absolute top-0 left-0 p-2 h-20 w-20 object-contain"
-                    alt="Logo"
-                ></Image> </Link> </button> */}
                 
       {/* Header */}
       <header className="mb-10">
