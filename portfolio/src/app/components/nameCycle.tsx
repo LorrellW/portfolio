@@ -2,17 +2,15 @@
 
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Big_Shoulders_Inline_Text,Bebas_Neue, Oswald, Stick_No_Bills, Doto, } from 'next/font/google'
+import { Bebas_Neue, Oswald, Stick_No_Bills, Doto, } from 'next/font/google'
 
 // Load 10 fonts (pick any you like)
- const shoulders = Big_Shoulders_Inline_Text({ subsets: ['latin'], weight: ['400','400'] })
  const bebas = Bebas_Neue({ subsets: ['latin'], weight: ['400', '400'] })
  const oswald = Oswald({ subsets: ['latin'], weight: ['400','200'] })
  const stickno = Stick_No_Bills({ subsets: ['latin'], weight: ['400','200'] })
 const doto = Doto({ subsets: ['latin'], weight: ['100','100'] })
 
 const FONTS = [
-   shoulders.className,
    bebas.className,
    oswald.className,
    stickno.className,
