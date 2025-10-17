@@ -23,7 +23,7 @@ const PROJECTS: Project[] = [
         tags: ["Full-stack", "React", "Figma", "UI/UX"],
         img: "/queue-app.png", 
         live: "https://www.queuedatingapp.com/",
-        metrics: { engagement: "+25%" },
+        //metrics: { engagement: "+25%" },
     },
     {
         title: "Fortune400 Dashboard",
@@ -32,7 +32,7 @@ const PROJECTS: Project[] = [
         img: "/fortune400.png",
         //live: "https://example.com/app",
         repo: "https://github.com/LorrellW/Commerce-Bank-App",
-        metrics: { perf: "95", a11y: "100" },
+        //metrics: { perf: "95", a11y: "100" },
     },
     {
         title: "Real Time Threat Tracker",
@@ -41,7 +41,7 @@ const PROJECTS: Project[] = [
         img: "/rtti.png",
         //live: "#",
         repo: "https://github.com/LorrellW/real-time-threat-intelligence",
-        metrics: { perf: "98" },
+        //metrics: { perf: "98" },
     },
 ];
 
