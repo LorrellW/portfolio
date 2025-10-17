@@ -30,8 +30,8 @@ const PROJECTS: Project[] = [
         oneLiner: "Banking analytics with typed APIs, charts, database and authentication.",
         tags: ["Full-stack", "Next.js", "TypeScript"],
         img: "/fortune400.png",
-        live: "https://example.com/app",
-        repo: "https://github.com/you/fortune400",
+        //live: "https://example.com/app",
+        repo: "https://github.com/LorrellW/Commerce-Bank-App",
         metrics: { perf: "95", a11y: "100" },
     },
     {
@@ -39,8 +39,8 @@ const PROJECTS: Project[] = [
         oneLiner: "Security threat intelligence dashboard with Kanban pipeline, search, and PDF export.",
         tags: ["Backend", "Node.js", "React"],
         img: "/rtti.png",
-        live: "#",
-        repo: "https://github.com/you/job-tracker",
+        //live: "#",
+        repo: "https://github.com/LorrellW/real-time-threat-intelligence",
         metrics: { perf: "98" },
     },
 ];
