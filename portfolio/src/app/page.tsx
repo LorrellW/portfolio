@@ -42,7 +42,7 @@ export default function Home() {
 
         {/* 1. Add bottom padding to prevent content from being hidden by the fixed footer */}
 
-        <main className="flex flex-col items-center justify-center min-h-screen p-4 pb-22 text-center">
+        <main className="flex flex-col items-center justify-center p-4 pb-22 text-center">
           <div className="md:max-w-2xl pt-20">
             <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-blend-color bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500`">
               Lorrell Winfield.
