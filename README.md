@@ -20,11 +20,11 @@ A modern, responsive portfolio built to showcase my front-end and full-stack pro
 
 ### Key Features
 
--   🔎 **Dynamic Project Filtering**: Easily search and filter projects by technology or title.
--   🌓 **Dark & Light Mode**: Seamless theme toggling with persistent state via `next-themes`.
--   📱 **Responsive & Accessible**: Mobile-first design using semantic HTML and optimized images.
--   📄 **Clear Navigation**: Dedicated pages for my background, skills, and contact information.
--   🧩 **Component-Driven UI**: Reusable components for project cards, tags, and theme toggles.
+-   **Dynamic Project Filtering**: Easily search and filter projects by technology or title.
+-   **Dark & Light Mode**: Seamless theme toggling with persistent state via `next-themes`.
+-   **Responsive & Accessible**: Mobile-first design using semantic HTML and optimized images.
+-   **Clear Navigation**: Dedicated pages for my background, skills, and contact information.
+-   **Component-Driven UI**: Reusable components for project cards, tags, and theme toggles.
 
 ### Technology Breakdown
 
