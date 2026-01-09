@@ -30,7 +30,7 @@ const PROJECTS: Project[] = [
         oneLiner: "Banking analytics with typed APIs, charts, database and authentication.",
         tags: ["Full-stack", "Next.js", "TypeScript"],
         img: "/fortune400.png",
-        //live: "https://example.com/app",
+        live: "https://commerce-bank-app.vercel.app/",
         repo: "https://github.com/LorrellW/Commerce-Bank-App",
         //metrics: { perf: "95", a11y: "100" },
     },
