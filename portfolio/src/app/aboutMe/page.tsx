@@ -188,7 +188,7 @@ export default function AboutMe() {
             </a>
 
             <a
-              href="/L.Winfield Resume 25.pdf"
+              href="/Winfield Resume 26.pdf"
               target="_blank"
               rel="noreferrer"
               className="block rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm transition hover:bg-foreground/5"
