@@ -2,15 +2,16 @@
 
 import { useState } from "react";
 import { SiGithub } from "react-icons/si";
-import { FiMail,  FiFileText, FiCopy, FiCheck, FiMapPin, FiClock } from "react-icons/fi";
+import { FiMail,  FiFileText, FiCopy, FiCheck, FiMapPin } from "react-icons/fi";
 import { BsLinkedin } from "react-icons/bs";
 import { MdOutlineHomeWork } from "react-icons/md";
 
 
 const EMAIL = "LorrellWinfieldii@gmail.com";           // ← put your real email
-const GITHUB = "https://github.com/your-username";
-const LINKEDIN = "https://www.linkedin.com/in/your-handle";
-const RESUME_URL = "L.Winfield Resume 25.pdf";             // put a PDF in /public or change this
+const GITHUB = "https://github.com/LorrellW";
+const LINKEDIN = "https://www.linkedin.com/in/lorrell-winfield-lw000/";
+const RESUME_URL = "Winfield Resume 26.pdf";             // put a PDF in /public or change this
+const DIPLOMA = "diploma2026.pdf";
 
 export default function ContactPage() {
   const [copied, setCopied] = useState(false);
@@ -94,6 +95,16 @@ export default function ContactPage() {
               </div>
               <p className="mt-2 text-sm text-foreground/70">One-page summary of skills, projects, and impact.</p>
             </a>
+
+            <a
+                href={DIPLOMA}
+                className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm transition hover:bg-foreground/5 sm:col-span-2"
+            >
+              <div className="flex items-center gap-2 text-lg font-semibold">
+                <FiFileText /> Certificate of Graduation
+              </div>
+              <p className="mt-2 text-sm text-foreground/70">One-page summary of skills, projects, and impact.</p>
+            </a>
           </div>
         </section>
 
@@ -106,10 +117,10 @@ export default function ContactPage() {
                 <FiMapPin className="mt-0.5" />
                 Kansas City, Missouri / Kansas City, Kansas 
               </li>
-              <li className="flex items-start gap-2">
-                <FiClock className="mt-0.5" />
-                Typical response within 48 hours
-              </li>
+              {/*<li className="flex items-start gap-2">*/}
+              {/*  <FiClock className="mt-0.5" />*/}
+              {/*  Typical response within 48 hours*/}
+              {/*</li>*/}
               <li className="flex items-start gap-2">
                 <MdOutlineHomeWork className="mt-0.5" />
                 Open to all roles: remote, hybrid, or onsite

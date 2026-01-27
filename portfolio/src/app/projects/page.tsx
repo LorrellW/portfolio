@@ -38,7 +38,7 @@ const PROJECTS: Project[] = [
     {
         title: "Fortune400 Dashboard",
         oneLiner: "Banking analytics with typed APIs, charts, database and authentication.",
-        tags: ["Full-stack", "Next.js", "TypeScript"],
+        tags: ["Full-stack", "Next.js", "JavaScript", "React", "TypeScript"],
         img: "/fortune400.png",
         live: "https://commerce-bank-app.vercel.app/",
         repo: "https://github.com/LorrellW/Commerce-Bank-App",
@@ -180,9 +180,6 @@ export default function ProjectsPage() {
         <main className="mx-auto max-w-6xl px-6 py-12 text-foreground">
             <header className="mb-10">
                 <h1 className="text-4xl font-semibold tracking-tight">Projects</h1>
-                <p className="mt-2 text-lg text-foreground/70">
-                    A collection of my work building engaging web applications and user experiences.
-                </p>
             </header>
 
             {/* Search & Filters */}
