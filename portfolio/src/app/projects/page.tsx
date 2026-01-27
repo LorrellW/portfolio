@@ -22,7 +22,7 @@ const PROJECTS: Project[] = [
         oneLiner: "Real-time weather app featuring server-side API proxying, glassmorphism UI, and dynamic error handling.",
         tags: ["Next.js", "JavaScript", "React", "API Integration"],
         img: "/weather-app.png", // app screenshot
-        live: "https://nextjs-weather-pse3edv8q-lorrellws-projects.vercel.app",
+        live: "https://nextjs-weather-app-kohl.vercel.app/",
         repo: "https://github.com/LorrellW/nextjs-weather-app",
         // metrics: { perf: "100", a11y: "100" },
     },
