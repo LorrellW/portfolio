@@ -18,6 +18,16 @@ type Project = {
 
 const PROJECTS: Project[] = [
     {
+        title: "Modern Weather Dashboard",
+        oneLiner: "Real-time weather app featuring server-side API proxying, glassmorphism UI, and dynamic error handling.",
+        tags: ["Next.js", "JavaScript", "React", "API Integration"],
+        img: "/weather-app.png", // app screenshot
+        live: "https://nextjs-weather-pse3edv8q-lorrellws-projects.vercel.app",
+        repo: "https://github.com/LorrellW/nextjs-weather-app",
+        // metrics: { perf: "100", a11y: "100" },
+    },
+
+    {
         title: "Queue Dating App",
         oneLiner: "Dating platform with real-time matching, chat features, and interactive user journeys.",
         tags: ["Full-stack", "React", "Figma", "UI/UX"],
