@@ -18,9 +18,11 @@ const SkillBadge = ({ skill }: { skill: string }) => (
 
 export default function AboutMe() {
   const skills = {
-    languages: ["JavaScript (ES6+)", "Python", "HTML5", "CSS3", "TypeScript"],
-    frameworks: ["React", "Next.js", "Node.js", "Tailwind CSS", "Firebase", "PostGreSQL"],
+    languages: ["Java", "JavaScript", "Kotlin", "HTML5", "CSS3", "TypeScript"],
+    frameworks: ["Spring boot", "JUnit", "React", "Next.js", "Node.js", "Tailwind CSS",],
     development: ["UI/UX Design", "State Management", "REST API", "Figma", "Git"],
+    toolsAndDevOps: ["Docker", "Maven", "Git", "REST APIs", "Selenium WebDriver"],
+    databases: ["PostgreSQL", "Redis", "Firebase", "MongoDB"],
   };
 
   return (
@@ -80,8 +82,10 @@ export default function AboutMe() {
             </ul>
           </div>
 
+          
           {/* Skills cards */}
           <div className="grid gap-4 sm:grid-cols-2">
+            {/* Languages */}
             <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
               <h3 className="text-lg font-semibold mb-3">Languages</h3>
               <div className="flex flex-wrap gap-2">
@@ -89,15 +93,33 @@ export default function AboutMe() {
               </div>
             </div>
 
+            {/* Frameworks */}
             <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
-              <h3 className="text-lg font-semibold mb-3">Frameworks & Tools</h3>
+              <h3 className="text-lg font-semibold mb-3">Frameworks</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.frameworks.map((s) => <SkillBadge key={s} skill={s} />)}
               </div>
             </div>
 
+            {/* Databases */}
+            <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
+              <h3 className="text-lg font-semibold mb-3">Databases</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.databases.map((s) => <SkillBadge key={s} skill={s} />)}
+              </div>
+            </div>
+
+            {/* Tools & DevOps */}
+            <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
+              <h3 className="text-lg font-semibold mb-3">Tools & DevOps</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.toolsAndDevOps.map((s) => <SkillBadge key={s} skill={s} />)}
+              </div>
+            </div>
+
+            {/* Development Skills (Full width) */}
             <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm sm:col-span-2">
-              <h3 className="text-lg font-semibold mb-3">Development Skills</h3>
+              <h3 className="text-lg font-semibold mb-3">Development & Design</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.development.map((s) => <SkillBadge key={s} skill={s} />)}
               </div>
@@ -108,9 +130,11 @@ export default function AboutMe() {
           <div className="rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm">
             <h2 className="text-lg font-semibold mb-3">What I&apos;m Looking For</h2>
             <p className="text-sm text-foreground/90 leading-relaxed">
-              Front-end or full-stack roles where I can leverage JavaScript 
-              to create exceptional user experiences. I thrive in collaborative environments and 
-              enjoy owning features from concept to deployment.
+              Backend or DevOps-focused roles where I can leverage Java, Spring Boot, 
+              and automation tools like Selenium and Docker to build resilient systems. 
+              I am passionate about optimizing the development lifecycle and ensuring 
+              software reliability. I thrive in mission-driven environments that value 
+              disciplined execution and scalable, clean architecture.
             </p>
           </div>
         </section>

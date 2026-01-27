@@ -7,7 +7,6 @@ import Link from "next/link";
 import Loading from "./components/Loading";
 
 
-
 export default function Home() {
   // HYDRATION FIX: Initialize isLoading to a fixed value (true) for all SSR renders.
   const [isLoading, setIsLoading] = useState(true);
