@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { FiExternalLink, FiGithub, FiPlayCircle } from "react-icons/fi";
 
 // --------- Types & sample data ----------
 type Project = {
@@ -11,29 +11,35 @@ type Project = {
     tags: string[];
     img?: string;
     live?: string;
+    demo?: string;
     repo?: string;
     metrics?: { perf?: string; a11y?: string; engagement?: string };
-    featured?: boolean;
+    // featured?: boolean; // Removed from usage
 };
 
 const PROJECTS: Project[] = [
     {
+        title: "Site Sentinel",
+        oneLiner: "Real-time availability monitoring with Headless Browser automation.",
+        tags: ["Java Spring Boot", "Playwright", "H2 Database", "Next.JS", "TailwindCSS", "TypeScript"],
+        img: "/siteSentinelScreenshot.png",
+        demo: "/site sentinel demo.gif",
+        repo: "https://github.com/LorrellW/site-sentinel",
+    },
+    {
         title: "Modern Weather Dashboard",
         oneLiner: "Real-time weather app featuring server-side API proxying, glassmorphism UI, and dynamic error handling.",
         tags: ["Next.js", "JavaScript", "React", "API Integration"],
-        img: "/weather-app.png", // app screenshot
+        img: "/weather-app.png",
         live: "https://nextjs-weather-app-kohl.vercel.app/",
         repo: "https://github.com/LorrellW/nextjs-weather-app",
-        // metrics: { perf: "100", a11y: "100" },
     },
-
     {
         title: "Queue Dating App",
         oneLiner: "Dating platform with real-time matching, chat features, and interactive user journeys.",
         tags: ["Full-stack", "React", "Figma", "UI/UX"],
-        img: "/queue-app.png", 
+        img: "/queue-app.png",
         live: "https://www.queuedatingapp.com/",
-        //metrics: { engagement: "+25%" },
     },
     {
         title: "Fortune400 Dashboard",
@@ -42,16 +48,13 @@ const PROJECTS: Project[] = [
         img: "/fortune400.png",
         live: "https://commerce-bank-app.vercel.app/",
         repo: "https://github.com/LorrellW/Commerce-Bank-App",
-        //metrics: { perf: "95", a11y: "100" },
     },
     {
         title: "Real Time Threat Tracker",
         oneLiner: "Security threat intelligence dashboard with Kanban pipeline, search, and PDF export.",
         tags: ["Backend", "Node.js", "React"],
         img: "/rtti.png",
-        //live: "#",
         repo: "https://github.com/LorrellW/real-time-threat-intelligence",
-        //metrics: { perf: "98" },
     },
 ];
 
@@ -87,14 +90,11 @@ function Metric({ label, value }: { label: string; value: string }) {
 
 function ProjectCard({ p }: { p: Project }) {
     return (
-        <article className={`group rounded-2xl border bg-background/40 p-4 shadow-sm transition hover:shadow-md ${p.featured ? 'border-purple-600/40 ring-1 ring-purple-600/20' : 'border-foreground/10 hover:bg-foreground/5'}`}>
-            {p.featured && (
-                <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-purple-600/10 px-2.5 py-1 text-[11px] font-semibold text-purple-600">
-                    <span className="h-1.5 w-1.5 rounded-full bg-purple-600"></span>
-                    Featured
-                </div>
-            )}
-            
+        // REMOVED: Conditional border/ring logic. Now using standard border-foreground/10 for all.
+        <article className="group flex flex-col h-full rounded-2xl border border-foreground/10 bg-background/40 p-5 shadow-sm transition hover:bg-foreground/5 hover:shadow-md">
+
+            {/* REMOVED: Featured Badge logic completely */}
+
             <div className="overflow-hidden rounded-xl border border-foreground/10">
                 {p.img ? (
                     <Image
@@ -102,54 +102,69 @@ function ProjectCard({ p }: { p: Project }) {
                         alt={`${p.title} screenshot`}
                         width={1200}
                         height={720}
-                        className="h-48 w-full object-cover transition duration-300 group-hover:scale-105"
+                        className="h-64 w-full object-cover transition duration-300 group-hover:scale-105"
                     />
                 ) : (
-                    <div className="h-48 w-full bg-foreground/10 flex items-center justify-center text-foreground/40 text-sm">
+                    <div className="h-64 w-full bg-foreground/10 flex items-center justify-center text-foreground/40 text-sm">
                         Preview coming soon
                     </div>
                 )}
             </div>
 
-            <h3 className="mt-4 text-lg font-semibold">{p.title}</h3>
-            <p className="mt-2 text-sm text-foreground/80 leading-relaxed">{p.oneLiner}</p>
+            <div className="flex-1">
+                <h3 className="mt-5 text-xl font-bold">{p.title}</h3>
+                <p className="mt-2 text-base text-foreground/80 leading-relaxed">{p.oneLiner}</p>
 
-            <div className="mt-3 flex flex-wrap gap-2">
-                {p.tags.map((t) => (
-                    <span key={t} className="rounded-full border border-foreground/15 bg-background/70 px-2.5 py-1 text-[11px] font-medium">
-                        {t}
-                    </span>
-                ))}
+                <div className="mt-4 flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                        <span key={t} className="rounded-full border border-foreground/15 bg-background/70 px-2.5 py-1 text-[11px] font-medium">
+                            {t}
+                        </span>
+                    ))}
+                </div>
+
+                {(p.metrics?.perf || p.metrics?.a11y || p.metrics?.engagement) && (
+                    <div className="mt-4 flex flex-wrap items-center gap-2">
+                        {p.metrics.engagement && <Metric label="Engagement" value={p.metrics.engagement} />}
+                        {p.metrics.perf && <Metric label="Performance" value={p.metrics.perf} />}
+                        {p.metrics.a11y && <Metric label="Accessibility" value={p.metrics.a11y} />}
+                    </div>
+                )}
             </div>
 
-            {(p.metrics?.perf || p.metrics?.a11y || p.metrics?.engagement) && (
-                <div className="mt-3 flex flex-wrap items-center gap-2">
-                    {p.metrics.engagement && <Metric label="Engagement" value={p.metrics.engagement} />}
-                    {p.metrics.perf && <Metric label="Performance" value={p.metrics.perf} />}
-                    {p.metrics.a11y && <Metric label="Accessibility" value={p.metrics.a11y} />}
-                </div>
-            )}
-
-            <div className="mt-4 flex gap-2">
+            <div className="mt-6 flex gap-3">
                 {p.live && (
                     <a
                         href={p.live}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 justify-center rounded-lg bg-foreground px-3 py-2 text-xs font-medium text-background transition hover:opacity-90"
+                        className="inline-flex items-center gap-1.5 justify-center rounded-lg bg-foreground px-4 py-2.5 text-sm font-medium text-background transition hover:opacity-90"
                     >
-                        <FiExternalLink size={13} />
+                        <FiExternalLink size={14} />
                         View Live
                     </a>
                 )}
+
+                {p.demo && (
+                    <a
+                        href={p.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 justify-center rounded-lg border border-purple-600/30 bg-purple-600/5 px-4 py-2.5 text-sm font-medium text-purple-600 transition hover:bg-purple-600/10"
+                    >
+                        <FiPlayCircle size={14} />
+                        Watch Demo
+                    </a>
+                )}
+
                 {p.repo && (
                     <a
                         href={p.repo}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 justify-center rounded-lg border border-foreground/20 px-3 py-2 text-xs font-medium transition hover:bg-foreground/10"
+                        className="inline-flex items-center gap-1.5 justify-center rounded-lg border border-foreground/20 px-4 py-2.5 text-sm font-medium transition hover:bg-foreground/10"
                     >
-                        <FiGithub size={13} />
+                        <FiGithub size={14} />
                         Code
                     </a>
                 )}
@@ -177,20 +192,23 @@ export default function ProjectsPage() {
     }, [query, active]);
 
     return (
-        <main className="mx-auto max-w-6xl px-6 py-12 text-foreground">
-            <header className="mb-10">
-                <h1 className="text-4xl font-semibold tracking-tight">Projects</h1>
+        <main className="mx-auto max-w-7xl px-6 py-12 text-foreground">
+            <header className="mb-12">
+                <h1 className="text-4xl font-bold tracking-tight">Projects</h1>
+                <p className="mt-3 text-lg text-foreground/60 max-w-2xl">
+                    A collection of applications, dashboards, and tools built with modern full-stack technologies.
+                </p>
             </header>
 
             {/* Search & Filters */}
-            <div className="mb-8 space-y-4">
+            <div className="mb-10 space-y-6">
                 <input
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Search projects..."
-                    className="w-full max-w-md rounded-lg border border-foreground/20 bg-background/60 px-4 py-2.5 text-sm outline-none transition focus:ring-2 focus:ring-foreground/30"
+                    className="w-full max-w-lg rounded-xl border border-foreground/20 bg-background/60 px-5 py-3 text-base outline-none transition focus:ring-2 focus:ring-foreground/30 shadow-sm"
                 />
-                
+
                 <div className="flex flex-wrap gap-2">
                     <Tag active={active === "All"} onClick={() => setActive("All")}>
                         All Projects
@@ -204,7 +222,7 @@ export default function ProjectsPage() {
             </div>
 
             {/* Grid */}
-            <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <section className="mx-auto grid max-w-5xl grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-2">
                 {filtered.map((p) => (
                     <ProjectCard key={p.title} p={p} />
                 ))}
@@ -212,14 +230,14 @@ export default function ProjectsPage() {
 
             {/* Empty state */}
             {filtered.length === 0 && (
-                <div className="mt-16 text-center">
-                    <p className="text-foreground/70">No projects match your search.</p>
+                <div className="mt-20 text-center">
+                    <p className="text-lg text-foreground/70">No projects match your search.</p>
                     <button
                         onClick={() => {
                             setQuery("");
                             setActive("All");
                         }}
-                        className="mt-3 text-sm text-purple-600 hover:underline"
+                        className="mt-4 text-base text-purple-600 hover:underline font-medium"
                     >
                         Clear filters
                     </button>
