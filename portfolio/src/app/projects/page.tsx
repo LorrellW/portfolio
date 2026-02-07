@@ -23,7 +23,7 @@ const PROJECTS: Project[] = [
         oneLiner: "Real-time availability monitoring with Headless Browser automation.",
         tags: ["Java Spring Boot", "Playwright", "H2 Database", "Next.JS", "TailwindCSS", "TypeScript"],
         img: "/siteSentinelScreenshot.png",
-        demo: "/site sentinel demo.gif",
+        demo: "/site-sentinel-demo.gif",
         repo: "https://github.com/LorrellW/site-sentinel",
     },
     {
