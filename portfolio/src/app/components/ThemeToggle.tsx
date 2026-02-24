@@ -71,7 +71,7 @@ export default function ThemeToggle() {
         aria-live="polite"
         className="select-none text-sm font-medium text-foreground"
       >
-        {isDark ? "Dark ⚫" : "Light ⚪"}
+        {isDark ? "Dark ⚫" : "Light 🔆"}
       </span>
     </div>
   );

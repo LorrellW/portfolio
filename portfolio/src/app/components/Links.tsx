@@ -22,7 +22,7 @@ export default function Links({ isMobileMenu = false, onLinkClick }: LinksProps)
     { href: "/aboutMe", label: "About Me" },
     { href: "/projects", label: "Projects" },
     { href: "/contactMe", label: "Contact" },
-    { href: "/settings", label: "Settings" },
+    //{ href: "/settings", label: "Settings" },
   ];
 
   const containerClasses = isMobileMenu

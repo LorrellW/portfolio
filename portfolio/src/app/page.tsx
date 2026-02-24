@@ -47,10 +47,10 @@ export default function Home() {
               Lorrell Winfield.
             </h1>
             <h2 className="text-xl md:text-2xl mt-2 mb-6">
-              Software Developer
+              Software Engineer
             </h2>
             <p className="text-md md:text-lg text-foreground/80 mb-8">
-              I build responsive, accessible, and engaging web experiences. Passionate about clean code, creative problem-solving, and bringing digital ideas to life.
+              I build robust, scalable Java applications and RESTful APIs, paired with responsive React frontends. Passionate about secure system architecture, backend logic, and solving complex enterprise data challenges.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <Link href="/projects" className="w-full sm:w-auto px-6 py-3 font-semibold text-white bg-gray-800 rounded-md hover:bg-gray-700 transition-colors dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300">
